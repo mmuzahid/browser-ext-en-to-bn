@@ -33,7 +33,7 @@ appAPI.ready(function($) {
                 'width': '200px',
                 'line-height': '100px',
                 'z-index': '9999',
-                'background-color': 'blue',
+                'background-color': '#490505',
                 'color' : 'white',
                 'border': '8px solid #666',
                 '-webkit-border-radius': '30px',
