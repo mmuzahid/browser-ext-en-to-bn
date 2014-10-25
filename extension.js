@@ -27,23 +27,14 @@ appAPI.ready(function($) {
                 // The class for the popup
                 class : 'popupTranslatedText',
             }).html(data).css({
-                //'position' : 'absolute',
-                // Specify the location of the popup relative to the location of the selected text
-               /* 'top' : event.pageY > 40 ? event.pageY - 30 : event.pageY + 10,
-                'left' : event.pageX > 20 ? event.pageX - 10 : event.pageX + 10,
-                'background-color' : '#782525',
-                'color' : 'red'*/
-              
                 'position': 'fixed',
-                'top': '0px',
-                'right': '0px',
+                'top': '50%',
+                'right': '10px',
                 'width': '200px',
-                //'height': '100px',
-                //'text-align': 'center',
                 'line-height': '100px',
                 'z-index': '9999',
-                'background-color': '#fff',
-                'color' : 'blue',
+                'background-color': 'blue',
+                'color' : 'white',
                 'border': '8px solid #666',
                 '-webkit-border-radius': '30px',
                 '-moz-border-radius': '30px',
