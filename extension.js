@@ -1,15 +1,9 @@
-  /************************************************************************************
-  This is my Page Code. The appAPI.ready() code block will be executed on every page load.
-  For more information please visit our docs site: http://docs.crossrider.com
+/************************************************************************************
+The appAPI.ready() code block will be executed on every page load.
 *************************************************************************************/
 
 appAPI.ready(function($) {
 
-    // Place your code here (you can also define new functions above this scope)
-    // The $ object is the extension's  object
-    
-    // This example detects a selection between 3 and 20 characters anywhere on a page
-    // and displays a popup with an option to search for the selected text using Google
     appAPI.selectedText(function(text, event) {
         // Removes previous #popupText elements
         $(".popupTranslatedText").remove();
@@ -46,17 +40,14 @@ appAPI.ready(function($) {
     
             // Slowly fade the popup in
             }).hide().appendTo('body').fadeIn('slow');
-            
-            // Slowly hide the popup when another location in the page is clicked
-            // (Does not prevent the Google search link from being clicked)
+
             $(document).mousedown(function(){
                 $(".popupTranslatedText").fadeOut("slow");
             }); 
           },
           onFailure: function(httpCode) {
             console.log("postback failure: " + httpCode);
-            // Slowly hide the popup when another location in the page is clicked
-            // (Does not prevent the Google search link from being clicked)
+            
             $(document).mousedown(function(){
                 $(".popupTranslatedText").fadeOut("slow");
             }); 
